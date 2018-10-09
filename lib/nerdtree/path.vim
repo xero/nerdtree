@@ -55,10 +55,6 @@ function! s:Path.cacheDisplayString() abort
         let self.cachedDisplayString .= ' {' . join(self._bookmarkNames) . '}'
     endif
 
-    if self.isSymLink
-        let self.cachedDisplayString .=  ' -> ' . self.symLinkDest
-    endif
-
     if self.isReadOnly
         let self.cachedDisplayString .=  ' ['.g:NERDTreeGlyphReadOnly.']'
     endif

@@ -384,8 +384,6 @@ function! s:UI._stripMarkup(line)
     " strip off any generic flags
     let line = substitute (line, '\[[^]]*\]', "","")
 
-    let line = substitute (line,' -> .*',"","") " remove link to
-
     return line
 endfunction
 
